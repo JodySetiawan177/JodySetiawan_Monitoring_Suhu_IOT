@@ -1,0 +1,56 @@
+[
+    {
+        "id": "ui_slider_pwm_proyek",
+        "type": "ui_slider",
+        "z": "tab_proyek_iot",
+        "name": "Slider PWM LED",
+        "label": "Kecerahan LED PWM (GPIO 2)",
+        "tooltip": "0 - 255",
+        "group": "grp_kontrol_proyek",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "iot/2410010177/aktuator/pwm",
+        "topicType": "str",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "className": "",
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "mqtt_out_aktuator"
+            ]
+        ]
+    },
+    {
+        "id": "grp_kontrol_proyek",
+        "type": "ui_group",
+        "name": "Kontrol Aktuator",
+        "tab": "tab_dashboard_proyek",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "tab_dashboard_proyek",
+        "type": "ui_tab",
+        "name": "Proyek Mini IoT",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a0194515a61a093f",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
